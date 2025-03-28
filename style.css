@@ -12,8 +12,21 @@
     text-align: left;
     color: #000;
   }
-  . {
-    width: 344px;
-    height: 344px;
-    margin: 213px 75px 36px 123px;
-  }
+  
+  .contenerdor {
+    display: flex;                   /* Activa Flexbox */
+    justify-content: space-between;  /* Espacio entre ítems */
+    align-items: center;             /* Centra verticalmente */
+    background: #bd6d6d;
+    padding: 20px;
+    height: 200px;
+}
+
+/* Estilos para los ítems */
+.item {
+    background: #4CAF50;
+    color: white;
+    padding: 20px;
+    text-align: center;
+    width: 100px;
+}
