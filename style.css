@@ -13,7 +13,7 @@
     color: #000;
   }
   
-  .contenerdo {
+  .contenedo {
     display: flex;                   /* Activa Flexbox */
     justify-content: space-around;  /* Espacio entre ítems */
     align-items: center;             /* Centra verticalmente */
