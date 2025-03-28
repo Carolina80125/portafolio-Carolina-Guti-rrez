@@ -13,20 +13,22 @@
     color: #000;
   }
   
-  .contenerdor {
+  .contenerdo {
     display: flex;                   /* Activa Flexbox */
-    justify-content: space-between;  /* Espacio entre ítems */
+    justify-content: space-around;  /* Espacio entre ítems */
     align-items: center;             /* Centra verticalmente */
     background: #bd6d6d;
-    padding: 20px;
-    height: 200px;
+    padding: 2%;
+    width: 100%;
+    height: 30%;
 }
 
 /* Estilos para los ítems */
 .item {
     background: #4CAF50;
     color: white;
-    padding: 20px;
+    padding: 20%;
     text-align: center;
-    width: 100px;
+    width: 30%;
+    height: 100%;
 }
