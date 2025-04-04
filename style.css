@@ -1,34 +1,237 @@
-.Hola {
-    width: 113px;
-    height: 26px;
-    margin: 0 177px 104px 176px;
-    font-family: Abel;
-    font-size: 200px;
-    font-weight: normal;
-    font-stretch: normal;
-    font-style: normal;
-    line-height: 3em;
-    letter-spacing: normal;
-    text-align: left;
-    color: #000;
-  }
-  
-  .contenedo {
-    display: flex;                   /* Activa Flexbox */
-    justify-content: space-around;  /* Espacio entre ítems */
-    align-items: center;             /* Centra verticalmente */
-    background: #bd6d6d;
-    padding: 2%;
-    width: 100%;
-    height: 30%;
-}
+        /* ===== VARIABLES Y ESTILOS BASE ===== */
+        :root {
+          --primary-color: #d90404;
+          --secondary-color: #333;
+          --light-bg: #f5f5f5;
+          --white: #ffffff;
+          --gap: 30px;
+          --border-radius: 10px;
+          --box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+      }
 
-/* Estilos para los ítems */
-.item {
-    background: #4CAF50;
-    color: white;
-    padding: 20%;
-    text-align: center;
-    width: 30%;
-    height: 100%;
-}
+      * {
+          margin: 0;
+          padding: 0;
+          box-sizing: border-box;
+      }
+
+      body {
+          font-family: 'Montserrat', sans-serif;
+          color: var(--secondary-color);
+          line-height: 1.6;
+      }
+
+      h1, h2, h3 {
+          font-weight: normal;
+      }
+
+      /* ===== UTILIDADES ===== */
+      .contenedor {
+          max-width: 1000px;
+          margin: 0 auto;
+          padding: 0 20px;
+      }
+
+      .contenedor-flex {
+          display: flex;
+          flex-wrap: wrap;
+          justify-content: center;
+          gap: var(--gap);
+      }
+
+      .seccion {
+          padding: 60px 0;
+      }
+
+      /* ===== SECCIÓN HERO ===== */
+      .hola {
+          min-height: 100vh;
+          display: flex;
+          flex-direction: column;
+          justify-content: center;
+          align-items: center;
+          text-align: center;
+          background-color: var(--light-bg);
+          padding: 20px;
+      }
+
+      .saludo {
+          font-size: 1.8rem;
+          font-weight: 300;
+          margin-bottom: 10px;
+      }
+
+      .titulo-principal {
+          font-family: 'Jersey 20', sans-serif;
+          font-size: clamp(2.2rem, 5vw, 3rem);
+          color: var(--primary-color);
+          margin-bottom: 20px;
+      }
+
+      .descripcion {
+          font-size: 1.1rem;
+          max-width: 500px;
+      }
+
+      /* ===== SECCIÓN INFORMACIÓN ===== */
+      .seccion-info {
+          background-color: var(--white);
+      }
+
+      .tarjeta {
+          flex: 1;
+          min-width: 250px;
+      }
+
+      .tarjeta-imagen {
+          flex: 0 0 250px;
+      }
+
+      .tarjeta-imagen img {
+          width: 100%;
+          border-radius: var(--border-radius);
+          box-shadow: var(--box-shadow);
+      }
+
+      .titulo-seccion {
+          font-family: 'Jersey 20', sans-serif;
+          font-size: 1.5rem;
+          color: var(--primary-color);
+          margin-bottom: 20px;
+      }
+
+      /* Contacto */
+      .lista-contactos {
+          display: flex;
+          flex-direction: column;
+          gap: 12px;
+      }
+
+      .item-contacto {
+          display: flex;
+          align-items: center;
+          gap: 10px;
+      }
+
+      .icono-contacto {
+          width: 24px;
+          height: 24px;
+      }
+
+      .texto-contacto {
+          font-size: 0.9rem;
+      }
+
+      /* Tarjeta de Educación */
+      .item-educacion {
+          margin-bottom: 20px;
+      }
+
+      .item-educacion h3 {
+          font-size: 1rem;
+          color: var(--primary-color);
+          margin-bottom: 5px;
+      }
+
+      .item-educacion p {
+          font-size: 0.9rem;
+          line-height: 1.5;
+      }
+
+      /* ===== SECCIÓN HABILIDADES ===== */
+      .seccion-habilidades {
+          background-color: var(--light-bg);
+      }
+
+      .habilidades-columnas {
+          display: flex;
+          flex-wrap: wrap;
+          justify-content: space-between;
+          gap: var(--gap);
+      }
+
+      .columna-habilidad {
+          flex: 1;
+          min-width: 100px;
+      }
+      .programas {
+          flex: 1;
+          min-width: 100px;
+      }
+
+      .programas {
+          flex: 0 0 100px;
+      }
+
+      .programas img {
+          width: 70%;
+      }
+
+
+      /* Idiomas (horizontal) */
+      .idiomas-lista {
+          display: flex;
+          flex-wrap: wrap;
+          gap: 10px;
+      }
+
+      /* Intereses (horizontal) */
+      .intereses-lista {
+          display: flex;
+          flex-wrap: wrap;
+          gap: 10px;
+      }
+
+      /* Estilo para items con icono */
+      .item-con-icono {
+          display: flex;
+          align-items: center;
+          gap: 10px;
+          background-color: white;
+          padding: 10px 15px;
+          border-radius: 20px;
+          box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+          font-size: 0.9rem;
+          font-weight: 600;
+      }
+
+      .icono-item {
+          width: 40px;
+          height: 40px;
+      }
+
+      /* ===== RESPONSIVO (según yo) ===== */
+      @media (max-width: 768px) {
+          .hero {
+              padding: 80px 20px;
+          }
+          
+          .contenedor-flex {
+              flex-direction: column;
+              align-items: center;
+          }
+          
+          .tarjeta-imagen {
+              margin-bottom: 30px;
+          }
+          
+          .habilidades-columnas {
+              flex-direction: column;
+          }
+          
+          .idiomas-lista, .intereses-lista {
+              justify-content: flex-start;
+          }
+          
+          .item-con-icono {
+              padding: 8px 12px;
+          }
+      }
+
+      @media (max-width: 480px) {
+          
+          .programa-item img {
+              width: 70%;
+              height: 70%;
+          }
+      }
